@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767856936086",
+    "project_id": "login-sign-up-ceb1f",
+    "storage_bucket": "login-sign-up-ceb1f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767856936086:android:5b784e67ef2bc95ab6aeb7",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKSLP8nWWfWN78_YMqiFBVjO3V2oOGoLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
