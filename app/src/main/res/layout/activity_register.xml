@@ -29,14 +29,14 @@
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
-        <!-- Status Field -->
+        <!-- Phone Field -->
         <EditText
-            android:id="@+id/signupStatus"
+            android:id="@+id/signupPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Enter Status"
-            android:inputType="text"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
             android:minHeight="48dp" />
 
         <!-- Email Field -->

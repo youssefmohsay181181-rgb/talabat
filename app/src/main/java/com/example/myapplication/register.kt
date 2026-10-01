@@ -23,22 +23,20 @@ class register : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.signupButton.setOnClickListener {
-            // Prevent multiple rapid clicks
             binding.signupButton.isEnabled = false
 
             val name = binding.signupName.text.toString().trim()
-            val status = binding.signupStatus.text.toString().trim()
+            val phone = binding.signupPhone.text.toString().trim()
             val email = binding.signupEmail.text.toString().trim()
             val password = binding.signupPassword.text.toString().trim()
 
-            // Field validation
             if (name.isEmpty()) {
                 binding.signupName.error = "Enter name"
                 binding.signupButton.isEnabled = true
                 return@setOnClickListener
             }
-            if (status.isEmpty()) {
-                binding.signupStatus.error = "Enter status"
+            if (phone.isEmpty()) {
+                binding.signupPhone.error = "Enter phone number"
                 binding.signupButton.isEnabled = true
                 return@setOnClickListener
             }
@@ -53,7 +51,6 @@ class register : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Step 1: Create account in Firebase Auth
             firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
@@ -62,9 +59,8 @@ class register : AppCompatActivity() {
                         if (uid != null) {
                             val userMap = HashMap<String, String>()
                             userMap["name"] = name
-                            userMap["status"] = status
+                            userMap["phone"] = phone
 
-                            // Step 2: Post immediately to Realtime Database under Users/{uid}
                             FirebaseDatabase.getInstance().getReference("Users")
                                 .child(uid)
                                 .setValue(userMap)
@@ -73,7 +69,6 @@ class register : AppCompatActivity() {
                                     if (dbTask.isSuccessful) {
                                         Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show()
 
-                                        // Step 3: Redirect directly to Profile Activity
                                         val intent = Intent(this, profile::class.java)
                                         startActivity(intent)
                                         finish()

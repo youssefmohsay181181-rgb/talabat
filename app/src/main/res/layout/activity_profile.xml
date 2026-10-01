@@ -3,38 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="32dp"
         android:text="User Profile"
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <!-- Name Input -->
     <EditText
         android:id="@+id/userProfileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Enter name"
+        android:hint="Name"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
+    <!-- Phone Number Input -->
     <EditText
         android:id="@+id/userProfilePhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:hint="Enter status"
-        android:inputType="text"
+        android:hint="Phone Number"
+        android:inputType="phone"
         android:minHeight="48dp" />
 
+    <!-- Save / Update Button -->
     <Button
         android:id="@+id/userProfileBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Profile" />
+        android:layout_marginBottom="12dp"
+        android:text="Save / Update Profile" />
+
+    <!-- Skip / Proceed to Main Button -->
+    <Button
+        android:id="@+id/userSkipBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed to Home" />
 
 </LinearLayout>
