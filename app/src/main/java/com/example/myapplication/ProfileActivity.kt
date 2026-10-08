@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.sellerapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -102,6 +102,7 @@ class ProfileActivity : AppCompatActivity() {
             }
 
             val updatedProfile = mapOf(
+                "role" to "seller",
                 "name" to name,
                 "address" to address,
                 "phone" to phone

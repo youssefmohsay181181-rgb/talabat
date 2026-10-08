@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.sellerapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -70,6 +70,7 @@ class SignupActivity : AppCompatActivity() {
 
                         // Create the user's profile data
                         val userProfile = mapOf(
+                            "role" to "seller",
                             "name" to name,
                             "address" to address,
                             "phone" to phone

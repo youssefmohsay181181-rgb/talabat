@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "865862115830",
+    "firebase_url": "https://talabat-23909-default-rtdb.firebaseio.com",
     "project_id": "talabat-23909",
     "storage_bucket": "talabat-23909.firebasestorage.app"
   },
@@ -10,6 +11,25 @@
         "mobilesdk_app_id": "1:865862115830:android:f6d91bfc251f15a9da27d7",
         "android_client_info": {
           "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuAfQl4vExYFfjveVD27odlQ8tQBogIlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865862115830:android:36c38475deba283cda27d7",
+        "android_client_info": {
+          "package_name": "com.example.sellerapp"
         }
       },
       "oauth_client": [],
